@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nandini Dubey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell" id="main-page">
+    <header class="hero">
+      <nav class="topbar">
+        <div class="brand">
+          <span class="brand-mark">R</span>
+          <div>
+            <p class="eyebrow">Personal Poetry Space</p>
+            <h1>Nandini Dubey</h1>
+          </div>
+        </div>
+        <a class="nav-link" href="#poems">Read My Poems</a>
+      </nav>
+
+      <section class="hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Dil se likhe lafz</p>
+          <h2>Yahaan har nazm ek ehsaas ki tarah rehti hai.</h2>
+          <p class="intro">
+            You are warmly welcome to contribute here. If you would like to share your poetry,
+            simply click the button below and submit your name along with your poem PDF.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#contribute">Contribute</a>
+            <a class="secondary-button" href="#poems">Read My Poems</a>
+          </div>
+        </div>
+
+        <aside class="hero-note">
+          <p class="note-label">Writer's Note</p>
+          <p>
+            "Main alfaazon mein woh sab rakh deti hoon jo roz bol nahi paati."
+          </p>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="section-heading" id="poems">
+        <p class="eyebrow">Collection</p>
+        <h3>Featured Poems</h3>
+        <p>Through these lines, I am pouring my heart out in front of you all...</p>
+      </section>
+
+      <section class="poem-grid" id="poem-list"></section>
+
+      <section class="contribute-section" id="contribute">
+        <div class="section-heading left">
+          <p class="eyebrow">Contribute</p>
+          <h3>Share Your Poetry</h3>
+          <p>Upload your poem in PDF format and add your name below.</p>
+        </div>
+
+        <form class="contribute-form" id="contribute-form">
+          <label>
+            <span>Your Name</span>
+            <input type="text" id="contributor-name" name="name" placeholder="Enter your name" required>
+          </label>
+
+          <label>
+            <span>Upload PDF</span>
+            <input type="file" id="poem-pdf" name="poemPdf" accept="application/pdf" required>
+          </label>
+
+          <button class="primary-button submit-button" type="submit">Submit Contribution</button>
+          <p class="form-message" id="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="about-section">
+        <div class="section-heading left">
+          <p class="eyebrow">About The Poet</p>
+          <h3>Aapki awaaz, aapka andaaz</h3>
+        </div>
+        <p>
+          Khamoshi ke is ghar mein,<br>
+          main roz ek diya jalati hoon.<br>
+          Jo baat kisi se keh na paun,<br>
+          use kagaz par sulaati hoon.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Written with heart and quiet nights.</p>
+      <p class="footer-note">Customize this site with your own poems, title, and bio.</p>
+    </footer>
+  </div>
+
+  <section class="reader-page hidden" id="reader-page" aria-hidden="true">
+    <div class="reader-shell">
+      <button class="reader-close" id="overlay-close" type="button" aria-label="Back to poems">Back to Poems</button>
+      <p class="poem-meta" id="overlay-tag"></p>
+      <h2 class="reader-title" id="overlay-title"></h2>
+      <div class="reader-body" id="overlay-body"></div>
+      <p class="overlay-author" id="overlay-author"></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
